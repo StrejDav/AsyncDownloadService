@@ -77,11 +77,11 @@ void DownloadService::_downloadFile(const std::string& url) {
 
     if (res != CURLE_OK) {
         std::remove(filename.c_str());
-        std::cerr << "Download of file \'" << filename.c_str() << "\' failed: " << curl_easy_strerror(res) << std::endl << "> ";
+        std::cerr << "\nDownload of file \'" << filename.c_str() << "\' failed: " << curl_easy_strerror(res) << std::endl << "> ";
     }
     else if (http_code >= 400) {
         std::remove(filename.c_str());
-        std::cerr << "Download of file \'" << filename.c_str() << "\' failed. HTTP code: " << http_code << std::endl << "> ";
+        std::cerr << "\nDownload of file \'" << filename.c_str() << "\' failed. HTTP code: " << http_code << std::endl << "> ";
     }
 }
 

@@ -19,7 +19,7 @@ private:
     std::queue<std::string> _downloadQueue;
     std::condition_variable _cv;
     std::mutex _mtx;
-    std::atomic<bool> _serviceRunning;
+    std::atomic<bool> _serviceRunning = false;
     std::vector<std::thread> _threadPool;
     static inline std::atomic<unsigned int> _nFile = 0; // Used in case there is no filename
 
