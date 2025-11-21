@@ -3,7 +3,7 @@
 #include <string_view>
 #include "DownloadService.hpp"
 
-#define N_WORKER_THREADS 4
+#define N_WORKER_THREADS 4U
 
 int main() {
     constexpr std::string_view DOWNLOAD_COMMAND = "download";

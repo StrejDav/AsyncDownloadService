@@ -11,7 +11,7 @@ DownloadService::~DownloadService() {
     }
 }
 
-void DownloadService::startService(int nWorkerThreads) {
+void DownloadService::startService(unsigned int nWorkerThreads) {
     if (!_serviceRunning) {
         _nWorkerThreads = nWorkerThreads;
         _serviceRunning = true;
